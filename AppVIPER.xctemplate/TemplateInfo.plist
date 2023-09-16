@@ -152,20 +152,99 @@ gem &apos;fastlane&apos;, &apos;&gt;= 2.214.0&apos;
 			<key>Path</key>
 			<string>Helpers/WeaklyClass.swift</string>
 		</dict>
-        
+        <!-- RootController -->
+		<key>Modules/Root/RootViewController.swift</key>
+		<dict>
+            <key>Group</key>
+            <array>
+				<string>Modules</string>
+				<string>Root</string>
+			</array>
+			<key>Path</key>
+			<string>Modules/Root/RootViewController.swift</string>
+		</dict>
+		<key>Modules/Root/EKRootController.swift</key>
+		<dict>
+            <key>Group</key>
+            <array>
+				<string>Modules</string>
+				<string>Root</string>
+			</array>
+			<key>Path</key>
+			<string>Modules/Root/EKRootController.swift</string>
+		</dict>
+		<!-- Deeplinks -->
+		<key>Modules/Root/Deeplinks/DeepLinkManager.swift</key>
+		<dict>
+            <key>Group</key>
+            <array>
+				<string>Modules</string>
+				<string>Root</string>
+				<string>Deeplinks</string>
+			</array>
+			<key>Path</key>
+			<string>Modules/Root/Deeplinks/DeepLinkManager.swift</string>
+		</dict>
+		<key>Modules/Root/Deeplinks/DeeplinkParser.swift</key>
+		<dict>
+            <key>Group</key>
+            <array>
+				<string>Modules</string>
+				<string>Root</string>
+				<string>Deeplinks</string>
+			</array>
+			<key>Path</key>
+			<string>Modules/Root/Deeplinks/DeeplinkParser.swift</string>
+		</dict>
+		<key>Modules/Root/Deeplinks/DeepLinkType.swift</key>
+		<dict>
+            <key>Group</key>
+            <array>
+				<string>Modules</string>
+				<string>Root</string>
+				<string>Deeplinks</string>
+			</array>
+			<key>Path</key>
+			<string>Modules/Root/Deeplinks/DeepLinkType.swift</string>
+		</dict>
+		<key>Modules/Root/Deeplinks/NotificationParser.swift</key>
+		<dict>
+            <key>Group</key>
+            <array>
+				<string>Modules</string>
+				<string>Root</string>
+				<string>Deeplinks</string>
+			</array>
+			<key>Path</key>
+			<string>Modules/Root/Deeplinks/NotificationParser.swift</string>
+		</dict>
+		<key>Modules/Root/Deeplinks/ShortcutParser.swift</key>
+		<dict>
+            <key>Group</key>
+            <array>
+				<string>Modules</string>
+				<string>Root</string>
+				<string>Deeplinks</string>
+			</array>
+			<key>Path</key>
+			<string>Modules/Root/Deeplinks/ShortcutParser.swift</string>
+		</dict>
 	</dict>
 	<key>Nodes</key>
 	<array>
 		<string>../Gemfile</string>
 		<string>../README.md</string>
 		<string>../Rambafile</string>
+		<!-- App -->
 		<string>App/AppDelegate.swift</string>
 		<string>App/SceneDelegate.swift</string>
+		<!-- Assembly -->
 		<string>Assembly/DIResolver.swift</string>
+		<!-- Extensions -->
         <string>Extensions/Bundle+Extension.swift</string>
         <string>Extensions/Date+Extension.swift</string>
         <string>Extensions/UIApplication+Extension.swift</string>
-
+		<!-- Helpers -->
         <string>Helpers/DispatchHelper.swift</string>
         <string>Helpers/ScaleHelper.swift</string>
         <string>Helpers/ScreenSize.swift</string>
@@ -173,6 +252,16 @@ gem &apos;fastlane&apos;, &apos;&gt;= 2.214.0&apos;
         <string>Helpers/SuffixFormatter.swift</string>
         <string>Helpers/TapticService.swift</string>
         <string>Helpers/WeaklyClass.swift</string>
+		<!-- Modules -->
+		<!-- RootViewController -->
+		<string>Modules/Root/RootViewController.swift</string>
+		<string>Modules/Root/EKRootController.swift</string>
+		<!-- Deeplinks -->
+		<string>Modules/Root/Deeplinks/DeepLinkManager.swift</string>
+		<string>Modules/Root/Deeplinks/DeeplinkParser.swift</string>
+		<string>Modules/Root/Deeplinks/DeepLinkType.swift</string>
+		<string>Modules/Root/Deeplinks/NotificationParser.swift</string>
+		<string>Modules/Root/Deeplinks/ShortcutParser.swift</string>
 	</array>
 	<key>SortOrder</key>
 	<integer>1</integer>
