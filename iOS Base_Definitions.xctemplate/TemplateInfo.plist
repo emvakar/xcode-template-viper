@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Kind</key>
+	<string>Xcode.Xcode3.ProjectTemplateUnitKind</string>
+	<key>Identifier</key>
+	<string>com.emvakar.dt.unit.iosBase_Definitions</string>
+	<key>Options</key>
+	<array>
+		<dict>
+			<key>Identifier</key>
+			<string>languageChoice</string>
+			<key>Units</key>
+			<dict>
+				<key>Swift</key>
+				<dict>
+					<key>RequiredOptions</key>
+					<dict>
+						<key>appLifecycle</key>
+						<string>Cocoa</string>
+					</dict>
+					<key>Definitions</key>
+					<dict/>
+				</dict>
+			</dict>
+		</dict>
+	</array>
+	<key>Definitions</key>
+	<dict>
+		<key>Info.plist:UISupportedInterfaceOrientations~iPhone</key>
+		<string>&lt;key&gt;UISupportedInterfaceOrientations&lt;/key&gt;
+&lt;array&gt;
+     &lt;string&gt;UIInterfaceOrientationPortrait&lt;/string&gt;
+&lt;/array&gt;</string>
+	</dict>
+</dict>
+</plist>

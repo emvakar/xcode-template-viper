@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Kind</key>
+	<string>Xcode.Xcode3.ProjectTemplateUnitKind</string>
+	<key>Identifier</key>
+	<string>com.emvakar.dt.unit.base</string>
+	<key>Ancestors</key>
+	<array>
+		<string>com.apple.dt.unit.base_DefinitionsLanguage</string>
+		<string>com.apple.dt.unit.base_DefinitionsInfoPlist</string>
+		<string>com.apple.dt.unit.base_ProjectSettings</string>
+		<string>com.apple.dt.unit.base_Options</string>
+		<string>com.apple.dt.unit.base_AppLifecycle</string>
+		<string>com.apple.dt.unit.base_StorageType</string>
+	</array>
+</dict>
+</plist>

@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Kind</key>
+	<string>Xcode.Xcode3.ProjectTemplateUnitKind</string>
+	<key>Identifier</key>
+	<string>com.emvakar.dt.unit.AppVIPER</string>
+	<key>Ancestors</key>
+	<array>
+		<string>com.emvakar.dt.unit.sceneLifecycleApplication</string>
+	</array>
+	<key>Concrete</key>
+	<true/>
+	<key>Description</key>
+	<string>This template provides a starting point for an application that uses a VIPER arch</string>
+	<key>Definitions</key>
+	<dict>
+		<key>../Gemfile</key>
+		<string>source &quot;https://rubygems.org&quot;
+
+gem &apos;fastlane&apos;, &apos;&gt;= 2.214.0&apos;
+			</string>
+		<key>../README.md</key>
+		<dict>
+			<key>Path</key>
+			<string>README.md</string>
+		</dict>
+		<key>../Rambafile</key>
+		<dict>
+			<key>Path</key>
+			<string>Rambafile</string>
+		</dict>
+        <!-- App -->
+		<key>App/AppDelegate.swift</key>
+		<dict>
+			<key>Path</key>
+			<string>App/AppDelegate.swift</string>
+            <key>Group</key>
+            <array>
+				<string>App</string>
+			</array>
+		</dict>
+		<key>App/SceneDelegate.swift</key>
+		<dict>
+			<key>Path</key>
+			<string>App/SceneDelegate.swift</string>
+            <key>Group</key>
+            <array>
+				<string>App</string>
+			</array>
+		</dict>
+        <!-- Assembly -->
+		<key>Assembly/DIResolver.swift</key>
+		<dict>
+            <key>Group</key>
+            <array>
+				<string>Assembly</string>
+			</array>
+			<key>Path</key>
+			<string>Assembly/DIResolver.swift</string>
+		</dict>
+        <!-- Extensions -->
+		<key>Extensions/Bundle+Extension.swift</key>
+		<dict>
+            <key>Group</key>
+            <array>
+				<string>Extensions</string>
+			</array>
+			<key>Path</key>
+			<string>Extensions/Bundle+Extension.swift</string>
+		</dict>
+        <key>Extensions/Date+Extension.swift</key>
+		<dict>
+            <key>Group</key>
+            <array>
+				<string>Extensions</string>
+			</array>
+			<key>Path</key>
+			<string>Extensions/Date+Extension.swift</string>
+		</dict>
+        <key>Extensions/UIApplication+Extension.swift</key>
+		<dict>
+            <key>Group</key>
+            <array>
+				<string>Extensions</string>
+			</array>
+			<key>Path</key>
+			<string>Extensions/UIApplication+Extension.swift</string>
+		</dict>
+        <!-- Helpers -->
+        <key>Helpers/DispatchHelper.swift</key>
+		<dict>
+            <key>Group</key>
+            <array>
+				<string>Helpers</string>
+			</array>
+			<key>Path</key>
+			<string>Helpers/DispatchHelper.swift</string>
+		</dict>
+        <key>Helpers/ScaleHelper.swift</key>
+		<dict>
+            <key>Group</key>
+            <array>
+				<string>Helpers</string>
+			</array>
+			<key>Path</key>
+			<string>Helpers/ScaleHelper.swift</string>
+		</dict>
+        <key>Helpers/ScreenSize.swift</key>
+		<dict>
+            <key>Group</key>
+            <array>
+				<string>Helpers</string>
+			</array>
+			<key>Path</key>
+			<string>Helpers/ScreenSize.swift</string>
+		</dict>
+        <key>Helpers/SearchBuffer.swift</key>
+		<dict>
+            <key>Group</key>
+            <array>
+				<string>Helpers</string>
+			</array>
+			<key>Path</key>
+			<string>Helpers/SearchBuffer.swift</string>
+		</dict>
+        <key>Helpers/SuffixFormatter.swift</key>
+		<dict>
+            <key>Group</key>
+            <array>
+				<string>Helpers</string>
+			</array>
+			<key>Path</key>
+			<string>Helpers/SuffixFormatter.swift</string>
+		</dict>
+        <key>Helpers/TapticService.swift</key>
+		<dict>
+            <key>Group</key>
+            <array>
+				<string>Helpers</string>
+			</array>
+			<key>Path</key>
+			<string>Helpers/TapticService.swift</string>
+		</dict>
+        <key>Helpers/WeaklyClass.swift</key>
+		<dict>
+            <key>Group</key>
+            <array>
+				<string>Helpers</string>
+			</array>
+			<key>Path</key>
+			<string>Helpers/WeaklyClass.swift</string>
+		</dict>
+        
+	</dict>
+	<key>Nodes</key>
+	<array>
+		<string>../Gemfile</string>
+		<string>../README.md</string>
+		<string>../Rambafile</string>
+		<string>App/AppDelegate.swift</string>
+		<string>App/SceneDelegate.swift</string>
+		<string>Assembly/DIResolver.swift</string>
+        <string>Extensions/Bundle+Extension.swift</string>
+        <string>Extensions/Date+Extension.swift</string>
+        <string>Extensions/UIApplication+Extension.swift</string>
+
+        <string>Helpers/DispatchHelper.swift</string>
+        <string>Helpers/ScaleHelper.swift</string>
+        <string>Helpers/ScreenSize.swift</string>
+        <string>Helpers/SearchBuffer.swift</string>
+        <string>Helpers/SuffixFormatter.swift</string>
+        <string>Helpers/TapticService.swift</string>
+        <string>Helpers/WeaklyClass.swift</string>
+	</array>
+	<key>SortOrder</key>
+	<integer>1</integer>
+	<key>NameOfInitialFileForEditor</key>
+	<string>File.swift</string>
+	<key>Options</key>
+	<array>
+		<dict>
+			<key>Identifier</key>
+			<string>languageChoice</string>
+			<key>Units</key>
+			<dict>
+				<key>Swift</key>
+				<array>
+					<dict>
+						<key>RequiredOptions</key>
+						<dict>
+							<key>userInterface</key>
+							<string>Storyboard</string>
+						</dict>
+						<key>Nodes</key>
+						<array>
+							<string>ViewController.swift:comments</string>
+							<string>ViewController.swift:imports:importCocoa</string>
+							<string>ViewController.swift:implementation(___FILEBASENAME___: UIViewController)</string>
+							<string>ViewController.swift:implementation:methods:viewDidLoad(override func viewDidLoad(\))</string>
+							<string>ViewController.swift:implementation:methods:viewDidLoad:super</string>
+						</array>
+						<key>Definitions</key>
+						<dict/>
+						<key>Targets</key>
+						<array>
+							<dict>
+								<key>SharedSettings</key>
+								<dict/>
+							</dict>
+						</array>
+					</dict>
+					<dict>
+						<key>RequiredOptions</key>
+						<dict>
+							<key>userInterface</key>
+							<string>SwiftUI</string>
+							<key>appLifecycle</key>
+							<string>Cocoa</string>
+						</dict>
+						<key>Nodes</key>
+						<array>
+							<string>Preview Content/Preview Assets.xcassets</string>
+							<string>SceneDelegate.swift:imports:importSwiftUI</string>
+							<string>SceneDelegate.swift:implementation:methods:sceneWillConnectToSession:body</string>
+							<string>SceneDelegate.swift:implementation:methods:sceneWillConnectToSession:body:windowScene</string>
+						</array>
+						<key>Definitions</key>
+						<dict>
+							<key>SceneDelegate.swift:implementation:methods:sceneWillConnectToSession:body</key>
+							<string>
+// Create the SwiftUI view that provides the window contents.
+let contentView = ContentView()
+</string>
+							<key>SceneDelegate.swift:implementation:methods:sceneWillConnectToSession:body:windowScene</key>
+							<string>
+// Use a UIHostingController as window root view controller.
+if let windowScene = scene as? UIWindowScene {
+    let window = UIWindow(windowScene: windowScene)
+    window.rootViewController = UIHostingController(rootView: contentView)
+    self.window = window
+    window.makeKeyAndVisible()
+}</string>
+							<key>*:imports:importSwiftUI</key>
+							<string>import SwiftUI</string>
+						</dict>
+						<key>Targets</key>
+						<array>
+							<dict>
+								<key>SharedSettings</key>
+								<dict>
+									<key>ENABLE_PREVIEWS</key>
+									<string>YES</string>
+									<key>DEVELOPMENT_ASSET_PATHS</key>
+									<string>___PACKAGENAMEPREVIEWCONTENT:quoteIfNeeded___</string>
+								</dict>
+							</dict>
+						</array>
+					</dict>
+					<dict>
+						<key>RequiredOptions</key>
+						<dict>
+							<key>userInterface</key>
+							<string>SwiftUI</string>
+							<key>storageType</key>
+							<string>Core Data</string>
+							<key>appLifecycle</key>
+							<string>Cocoa</string>
+						</dict>
+						<key>Nodes</key>
+						<array>
+							<string>SceneDelegate.swift:implementation:methods:sceneWillConnectToSession:body</string>
+						</array>
+						<key>Definitions</key>
+						<dict>
+							<key>SceneDelegate.swift:implementation:methods:sceneWillConnectToSession:body</key>
+							<string>
+// Get the managed object context from the shared persistent container.
+let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+
+// Create the SwiftUI view and set the context as the value for the managedObjectContext environment keyPath.
+// Add `@Environment(\.managedObjectContext)` in the views that will need the context.
+let contentView = ContentView().environment(\.managedObjectContext, context)
+</string>
+						</dict>
+					</dict>
+				</array>
+			</dict>
+		</dict>
+		<dict>
+			<key>Identifier</key>
+			<string>userInterface</string>
+			<key>Name</key>
+			<string>Interface:</string>
+			<key>Description</key>
+			<string>The type of user interface.</string>
+			<key>Values</key>
+			<array>
+				<string>SwiftUI</string>
+				<string>Storyboard</string>
+			</array>
+			<key>Default</key>
+			<string>SwiftUI</string>
+			<key>Type</key>
+			<string>popup</string>
+		</dict>
+	</array>
+	<key>Image</key>
+	<dict>
+		<key>BundleImageName</key>
+		<string>app</string>
+		<key>BundleIdentifier</key>
+		<string>com.apple.dt.IDEKit</string>
+	</dict>
+</dict>
+</plist>
