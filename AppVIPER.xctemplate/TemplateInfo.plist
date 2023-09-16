@@ -31,13 +31,12 @@ gem &apos;fastlane&apos;, &apos;&gt;= 2.214.0&apos;
 			<key>Path</key>
 			<string>Rambafile</string>
 		</dict>
-        <!-- App -->
 		<key>App/AppDelegate.swift</key>
 		<dict>
 			<key>Path</key>
 			<string>App/AppDelegate.swift</string>
-            <key>Group</key>
-            <array>
+			<key>Group</key>
+			<array>
 				<string>App</string>
 			</array>
 		</dict>
@@ -45,118 +44,114 @@ gem &apos;fastlane&apos;, &apos;&gt;= 2.214.0&apos;
 		<dict>
 			<key>Path</key>
 			<string>App/SceneDelegate.swift</string>
-            <key>Group</key>
-            <array>
+			<key>Group</key>
+			<array>
 				<string>App</string>
 			</array>
 		</dict>
-        <!-- Assembly -->
 		<key>Assembly/DIResolver.swift</key>
 		<dict>
-            <key>Group</key>
-            <array>
+			<key>Group</key>
+			<array>
 				<string>Assembly</string>
 			</array>
 			<key>Path</key>
 			<string>Assembly/DIResolver.swift</string>
 		</dict>
-        <!-- Extensions -->
 		<key>Extensions/Bundle+Extension.swift</key>
 		<dict>
-            <key>Group</key>
-            <array>
+			<key>Group</key>
+			<array>
 				<string>Extensions</string>
 			</array>
 			<key>Path</key>
 			<string>Extensions/Bundle+Extension.swift</string>
 		</dict>
-        <key>Extensions/Date+Extension.swift</key>
+		<key>Extensions/Date+Extension.swift</key>
 		<dict>
-            <key>Group</key>
-            <array>
+			<key>Group</key>
+			<array>
 				<string>Extensions</string>
 			</array>
 			<key>Path</key>
 			<string>Extensions/Date+Extension.swift</string>
 		</dict>
-        <key>Extensions/UIApplication+Extension.swift</key>
+		<key>Extensions/UIApplication+Extension.swift</key>
 		<dict>
-            <key>Group</key>
-            <array>
+			<key>Group</key>
+			<array>
 				<string>Extensions</string>
 			</array>
 			<key>Path</key>
 			<string>Extensions/UIApplication+Extension.swift</string>
 		</dict>
-        <!-- Helpers -->
-        <key>Helpers/DispatchHelper.swift</key>
+		<key>Helpers/DispatchHelper.swift</key>
 		<dict>
-            <key>Group</key>
-            <array>
+			<key>Group</key>
+			<array>
 				<string>Helpers</string>
 			</array>
 			<key>Path</key>
 			<string>Helpers/DispatchHelper.swift</string>
 		</dict>
-        <key>Helpers/ScaleHelper.swift</key>
+		<key>Helpers/ScaleHelper.swift</key>
 		<dict>
-            <key>Group</key>
-            <array>
+			<key>Group</key>
+			<array>
 				<string>Helpers</string>
 			</array>
 			<key>Path</key>
 			<string>Helpers/ScaleHelper.swift</string>
 		</dict>
-        <key>Helpers/ScreenSize.swift</key>
+		<key>Helpers/ScreenSize.swift</key>
 		<dict>
-            <key>Group</key>
-            <array>
+			<key>Group</key>
+			<array>
 				<string>Helpers</string>
 			</array>
 			<key>Path</key>
 			<string>Helpers/ScreenSize.swift</string>
 		</dict>
-        <key>Helpers/SearchBuffer.swift</key>
+		<key>Helpers/SearchBuffer.swift</key>
 		<dict>
-            <key>Group</key>
-            <array>
+			<key>Group</key>
+			<array>
 				<string>Helpers</string>
 			</array>
 			<key>Path</key>
 			<string>Helpers/SearchBuffer.swift</string>
 		</dict>
-        <key>Helpers/SuffixFormatter.swift</key>
+		<key>Helpers/SuffixFormatter.swift</key>
 		<dict>
-            <key>Group</key>
-            <array>
+			<key>Group</key>
+			<array>
 				<string>Helpers</string>
 			</array>
 			<key>Path</key>
 			<string>Helpers/SuffixFormatter.swift</string>
 		</dict>
-        <key>Helpers/TapticService.swift</key>
+		<key>Helpers/TapticService.swift</key>
 		<dict>
-            <key>Group</key>
-            <array>
+			<key>Group</key>
+			<array>
 				<string>Helpers</string>
 			</array>
 			<key>Path</key>
 			<string>Helpers/TapticService.swift</string>
 		</dict>
-        <key>Helpers/WeaklyClass.swift</key>
+		<key>Helpers/WeaklyClass.swift</key>
 		<dict>
-            <key>Group</key>
-            <array>
+			<key>Group</key>
+			<array>
 				<string>Helpers</string>
 			</array>
 			<key>Path</key>
 			<string>Helpers/WeaklyClass.swift</string>
 		</dict>
-        <!-- RootController -->
 		<key>Modules/Root/RootViewController.swift</key>
 		<dict>
-            <key>Group</key>
-            <array>
+			<key>Group</key>
+			<array>
 				<string>Modules</string>
 				<string>Root</string>
 			</array>
@@ -165,19 +160,18 @@ gem &apos;fastlane&apos;, &apos;&gt;= 2.214.0&apos;
 		</dict>
 		<key>Modules/Root/EKRootController.swift</key>
 		<dict>
-            <key>Group</key>
-            <array>
+			<key>Group</key>
+			<array>
 				<string>Modules</string>
 				<string>Root</string>
 			</array>
 			<key>Path</key>
 			<string>Modules/Root/EKRootController.swift</string>
 		</dict>
-		<!-- Deeplinks -->
 		<key>Modules/Root/Deeplinks/DeepLinkManager.swift</key>
 		<dict>
-            <key>Group</key>
-            <array>
+			<key>Group</key>
+			<array>
 				<string>Modules</string>
 				<string>Root</string>
 				<string>Deeplinks</string>
@@ -187,8 +181,8 @@ gem &apos;fastlane&apos;, &apos;&gt;= 2.214.0&apos;
 		</dict>
 		<key>Modules/Root/Deeplinks/DeeplinkParser.swift</key>
 		<dict>
-            <key>Group</key>
-            <array>
+			<key>Group</key>
+			<array>
 				<string>Modules</string>
 				<string>Root</string>
 				<string>Deeplinks</string>
@@ -198,8 +192,8 @@ gem &apos;fastlane&apos;, &apos;&gt;= 2.214.0&apos;
 		</dict>
 		<key>Modules/Root/Deeplinks/DeepLinkType.swift</key>
 		<dict>
-            <key>Group</key>
-            <array>
+			<key>Group</key>
+			<array>
 				<string>Modules</string>
 				<string>Root</string>
 				<string>Deeplinks</string>
@@ -209,8 +203,8 @@ gem &apos;fastlane&apos;, &apos;&gt;= 2.214.0&apos;
 		</dict>
 		<key>Modules/Root/Deeplinks/NotificationParser.swift</key>
 		<dict>
-            <key>Group</key>
-            <array>
+			<key>Group</key>
+			<array>
 				<string>Modules</string>
 				<string>Root</string>
 				<string>Deeplinks</string>
@@ -220,8 +214,8 @@ gem &apos;fastlane&apos;, &apos;&gt;= 2.214.0&apos;
 		</dict>
 		<key>Modules/Root/Deeplinks/ShortcutParser.swift</key>
 		<dict>
-            <key>Group</key>
-            <array>
+			<key>Group</key>
+			<array>
 				<string>Modules</string>
 				<string>Root</string>
 				<string>Deeplinks</string>
@@ -229,39 +223,92 @@ gem &apos;fastlane&apos;, &apos;&gt;= 2.214.0&apos;
 			<key>Path</key>
 			<string>Modules/Root/Deeplinks/ShortcutParser.swift</string>
 		</dict>
+		<key>Modules/Base/Interactor/BaseInteractor.swift</key>
+		<dict>
+			<key>Group</key>
+			<array>
+				<string>Modules</string>
+				<string>Base</string>
+				<string>Interactor</string>
+			</array>
+			<key>Path</key>
+			<string>Modules/Base/Interactor/BaseInteractor.swift</string>
+		</dict>
+		<key>Modules/Base/Presenter/BasePresenter.swift</key>
+		<dict>
+			<key>Group</key>
+			<array>
+				<string>Modules</string>
+				<string>Base</string>
+				<string>Presenter</string>
+			</array>
+			<key>Path</key>
+			<string>Modules/Base/Presenter/BasePresenter.swift</string>
+		</dict>
+		<key>Modules/Base/Protocols/BaseProtocols.swift</key>
+		<dict>
+			<key>Group</key>
+			<array>
+				<string>Modules</string>
+				<string>Base</string>
+				<string>Protocols</string>
+			</array>
+			<key>Path</key>
+			<string>Modules/Base/Protocols/BaseProtocols.swift</string>
+		</dict>
+		<key>Modules/Base/View/BaseViewController.swift</key>
+		<dict>
+			<key>Group</key>
+			<array>
+				<string>Modules</string>
+				<string>Base</string>
+				<string>View</string>
+			</array>
+			<key>Path</key>
+			<string>Modules/Base/View/BaseViewController.swift</string>
+		</dict>
+		<key>Modules/Base/WireFrame/BaseWireFrame.swift</key>
+		<dict>
+			<key>Group</key>
+			<array>
+				<string>Modules</string>
+				<string>Base</string>
+				<string>WireFrame</string>
+			</array>
+			<key>Path</key>
+			<string>Modules/Base/WireFrame/BaseWireFrame.swift</string>
+		</dict>
 	</dict>
 	<key>Nodes</key>
 	<array>
 		<string>../Gemfile</string>
 		<string>../README.md</string>
 		<string>../Rambafile</string>
-		<!-- App -->
 		<string>App/AppDelegate.swift</string>
 		<string>App/SceneDelegate.swift</string>
-		<!-- Assembly -->
 		<string>Assembly/DIResolver.swift</string>
-		<!-- Extensions -->
-        <string>Extensions/Bundle+Extension.swift</string>
-        <string>Extensions/Date+Extension.swift</string>
-        <string>Extensions/UIApplication+Extension.swift</string>
-		<!-- Helpers -->
-        <string>Helpers/DispatchHelper.swift</string>
-        <string>Helpers/ScaleHelper.swift</string>
-        <string>Helpers/ScreenSize.swift</string>
-        <string>Helpers/SearchBuffer.swift</string>
-        <string>Helpers/SuffixFormatter.swift</string>
-        <string>Helpers/TapticService.swift</string>
-        <string>Helpers/WeaklyClass.swift</string>
-		<!-- Modules -->
-		<!-- RootViewController -->
+		<string>Extensions/Bundle+Extension.swift</string>
+		<string>Extensions/Date+Extension.swift</string>
+		<string>Extensions/UIApplication+Extension.swift</string>
+		<string>Helpers/DispatchHelper.swift</string>
+		<string>Helpers/ScaleHelper.swift</string>
+		<string>Helpers/ScreenSize.swift</string>
+		<string>Helpers/SearchBuffer.swift</string>
+		<string>Helpers/SuffixFormatter.swift</string>
+		<string>Helpers/TapticService.swift</string>
+		<string>Helpers/WeaklyClass.swift</string>
 		<string>Modules/Root/RootViewController.swift</string>
 		<string>Modules/Root/EKRootController.swift</string>
-		<!-- Deeplinks -->
 		<string>Modules/Root/Deeplinks/DeepLinkManager.swift</string>
 		<string>Modules/Root/Deeplinks/DeeplinkParser.swift</string>
 		<string>Modules/Root/Deeplinks/DeepLinkType.swift</string>
 		<string>Modules/Root/Deeplinks/NotificationParser.swift</string>
 		<string>Modules/Root/Deeplinks/ShortcutParser.swift</string>
+		<string>Modules/Base/Interactor/BaseInteractor.swift</string>
+		<string>Modules/Base/Presenter/BasePresenter.swift</string>
+		<string>Modules/Base/Protocols/BaseProtocols.swift</string>
+		<string>Modules/Base/View/BaseViewController.swift</string>
+		<string>Modules/Base/WireFrame/BaseWireFrame.swift</string>
 	</array>
 	<key>SortOrder</key>
 	<integer>1</integer>
@@ -296,7 +343,10 @@ gem &apos;fastlane&apos;, &apos;&gt;= 2.214.0&apos;
 						<array>
 							<dict>
 								<key>SharedSettings</key>
-								<dict/>
+								<dict>
+									<key>SWIFT_VERSION</key>
+									<string>5.0</string>
+								</dict>
 							</dict>
 						</array>
 					</dict>

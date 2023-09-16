@@ -46,13 +46,13 @@ open class EKRootViewController<DeeplinkType>: UIViewController, EKRootViewContr
         }
     }
 
-    open var splashScreen: UIViewController { logger.info("a splashScreen"); return UIViewController() }
-    open var loginScreen: UIViewController { logger.info("a loginScreen"); return UIViewController() }
-    open var logoutScreen: UIViewController { logger.info("a logoutScreen"); return UIViewController() }
-    open var mainScreen: UIViewController { logger.info("a mainScreen"); return UIViewController() }
+    open var splashScreen: UIViewController { print("a splashScreen"); return UIViewController() }
+    open var loginScreen: UIViewController { print("a loginScreen"); return UIViewController() }
+    open var logoutScreen: UIViewController { print("a logoutScreen"); return UIViewController() }
+    open var mainScreen: UIViewController { print("a mainScreen"); return UIViewController() }
     open var onboardingScreen: UIViewController? { return nil }
 
-    open var initialScreen: UIViewController { logger.info("a initialScreen"); return splashScreen }
+    open var initialScreen: UIViewController { print("a initialScreen"); return splashScreen }
 
     open var shouldShowOnboardingBeforeMainScreen: Bool = true
 
@@ -77,11 +77,11 @@ open class EKRootViewController<DeeplinkType>: UIViewController, EKRootViewContr
 
     open func showLoginScreen(onboarding complete: Bool = false) {
         if currentType == .onboarding, !complete {
-            logger.warning("⚠️ onboarding is opened, cant show login")
+            print("⚠️ onboarding is opened, cant show login")
             return
         }
         if currentType == .login {
-            logger.warning("⚠️ Don't show login twice")
+            print("⚠️ Don't show login twice")
             return
         }
         currentType = .login
@@ -92,7 +92,7 @@ open class EKRootViewController<DeeplinkType>: UIViewController, EKRootViewContr
     open func showOnboardingScreen(_ trainsition: TransitionAnimation = .none) -> Bool {
         guard let new = onboardingScreen else { return false }
         if currentType == .onboarding {
-            logger.warning("⚠️ Don't show onboarding twice")
+            print("⚠️ Don't show onboarding twice")
             return false
         }
         currentType = .onboarding
@@ -107,11 +107,11 @@ open class EKRootViewController<DeeplinkType>: UIViewController, EKRootViewContr
 
     open func switchToLogout(_ trainsition: TransitionAnimation, onboarding complete: Bool = false) {
         if currentType == .onboarding, !complete {
-            logger.warning("⚠️ onboarding is opened, cant show login")
+            print("⚠️ onboarding is opened, cant show login")
             return
         }
         if currentType == .logout {
-            logger.warning("⚠️ Don't call switch to logout twice")
+            print("⚠️ Don't call switch to logout twice")
             return
         }
         currentType = .logout
@@ -127,14 +127,14 @@ open class EKRootViewController<DeeplinkType>: UIViewController, EKRootViewContr
 
     open func switchToMainScreen(onboarding complete: Bool = false) {
         if currentType == .onboarding, !complete {
-            logger.warning("⚠️ onboarding is opened, cant show main screen")
+            print("⚠️ onboarding is opened, cant show main screen")
             return
         }
         if currentType == .main {
-            logger.warning("⚠️ Don't call switch to main screen twice")
+            print("⚠️ Don't call switch to main screen twice")
             return
         }
-        if shouldShowOnboardingBeforeMainScreen, showOnboardingScreen() { logger.warning("wrong"); return }
+        if shouldShowOnboardingBeforeMainScreen, showOnboardingScreen() { print("wrong"); return }
         currentType = .main
         animateFadeTransition(to: mainScreen) { [weak self] in
             if let deeplink = self?.deeplink {

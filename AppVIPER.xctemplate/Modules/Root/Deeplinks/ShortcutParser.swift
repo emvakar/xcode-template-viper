@@ -22,9 +22,6 @@ class ShortcutParser {
     }
 
     func handleShortcut(_ shortcut: UIApplicationShortcutItem) -> DeeplinkType? {
-        if shortcut == .tmp {
-            return DeeplinkType.main
-        }
         return nil
     }
 }

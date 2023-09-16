@@ -25,7 +25,6 @@ class DeepLinkManager {
     @discardableResult
     func handleDeeplink(url: URL) -> Bool {
         deeplinkType = DeeplinkParser.shared.parseDeepLink(url)
-        Analytics.sendEvent(event: .deeplink, params: ["deeplink": url.absoluteString])
         if deeplinkType != nil {
             checkDeepLink()
             return true
