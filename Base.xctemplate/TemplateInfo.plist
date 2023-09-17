@@ -10,7 +10,7 @@
 	<array>
 		<string>com.apple.dt.unit.base_DefinitionsLanguage</string>
 		<string>com.apple.dt.unit.base_DefinitionsInfoPlist</string>
-		<string>com.apple.dt.unit.base_ProjectSettings</string>
+		<string>com.emvakar.dt.unit.base_ProjectSettings</string>
 		<string>com.apple.dt.unit.base_Options</string>
 		<string>com.apple.dt.unit.base_AppLifecycle</string>
 		<string>com.apple.dt.unit.base_StorageType</string>

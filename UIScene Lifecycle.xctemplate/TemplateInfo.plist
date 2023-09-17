@@ -28,7 +28,7 @@
                             &lt;key&gt;UISceneConfigurationName&lt;/key&gt;
                             &lt;string&gt;Default Configuration&lt;/string&gt;
                             &lt;key&gt;UISceneDelegateClassName&lt;/key&gt;
-                            &lt;string&gt;___VARIABLE_moduleNamePrefixForClasses:XML___SceneDelegate&lt;/string&gt;
+                            &lt;string&gt;$(PRODUCT_MODULE_NAME).SceneDelegate&lt;/string&gt;
 </string>
 			<key>End</key>
 			<string>
