@@ -1,0 +1,114 @@
+name: TestFlight
+
+on: 
+  push:
+    branches:
+      - 'release/**'
+    paths-ignore:
+      - '**.md'
+      - 'LICENSE'
+      - '**/*.gitignore'
+      - '**/*.eslintrc.json'
+      - '**/*.dockerignore'
+
+  workflow_dispatch:
+
+jobs:
+  notification_start:
+    name: Notification start
+    runs-on: [self-hosted, dockered]
+    steps:
+      - name: Discord notification
+        id: discord
+        uses: emvakar/discord-notification-action@v1.0.6
+        with:
+          status: 'Start'
+          webhook: ${{ secrets.DISCORD_WEBHOOK }}
+          
+
+  notification_done:
+    name: Notification on success()
+    if: ${{ success() }}
+    needs: [notification_start, testflight]
+    runs-on: [self-hosted, dockered]
+    steps:
+      - name: Discord notification
+        id: discord
+        uses: emvakar/discord-notification-action@v1.0.6
+        with:
+          status: 'Done'
+          icon: '✅'
+          webhook: ${{ secrets.DISCORD_WEBHOOK }}
+
+  notification_error:
+    name: Notification on success()
+    if: ${{ failure() || cancelled() }}
+    needs: [notification_start, testflight]
+    runs-on: [self-hosted, dockered]
+    steps:
+      - name: Discord notification
+        id: discord
+        uses: emvakar/discord-notification-action@v1.0.6
+        with:
+          status: 'Error'
+          icon: '❌'
+          webhook: ${{ secrets.DISCORD_WEBHOOK }}
+
+  testflight:
+    name: TestFlight
+    runs-on: [self-hosted, testflight]
+    needs: notification_start
+    env:
+      DERIVED_PATH: '${{ secrets.DERIVED_PATH }}'
+      CRASHLYTICS_PATH: '${{ secrets.CRASHLYTICS_PATH }}'
+      DATA_META_PATH: '${{ secrets.DATA_META_PATH }}'
+      DATA_SCREEN_PATH: '${{ secrets.DATA_SCREEN_PATH }}'
+      MAIN_PROJECT_FILE: '${{ secrets.MAIN_PROJECT_FILE }}'
+      MAIN_TARGET: '${{ secrets.MAIN_TARGET }}'
+      MAIN_SCHEME: '${{ secrets.MAIN_SCHEME }}'
+      APP_IDENTIFIER: '${{ secrets.APP_IDENTIFIER }}'
+      TELEGRAM_BOT_TOKEN: '${{ secrets.TELEGRAM_BOT_TOKEN }}'
+      TELEGRAM_CHAT_ID: '${{ secrets.TELEGRAM_CHAT_ID }}'
+      APPSTORE_KEY_ID: '${{ secrets.APPSTORE_KEY_ID }}'
+      APPSTORE_ISSUER_ID: '${{ secrets.APPSTORE_ISSUER_ID }}'
+      APPSTORE_KEY_CONTENT: '${{ secrets.APPSTORE_KEY_CONTENT }}'
+      SLACK_URL: '${{ secrets.SLACK_URL }}'
+      MATCH_PASSWORD: '${{ secrets.MATCH_PASSWORD }}'
+      ACCOUNT_EMAIL: '${{ secrets.ACCOUNT_EMAIL }}'
+      ITC_TEAM_ID: '${{ secrets.ITC_TEAM_ID }}'
+      MATCH_GIT_URL: '${{ secrets.MATCH_GIT_URL }}'
+      TEAM_ID: '${{ secrets.TEAM_ID }}'
+      FASTLANE_ITC_TEAM_ID: '${{ secrets.FASTLANE_ITC_TEAM_ID }}'
+      APPMETRICA_KEY: '${{ secrets.APPMETRICA_KEY }}'
+      BUILD_NUMBER: '${{ github.run_number }}'
+      BUILD_BRANCH: '${{ github.ref_name }}'
+      TOKEN_GITHUB: '${{ secrets.TOKEN_GITHUB }}'
+      FASTLANE_XCODEBUILD_SETTINGS_RETRIES: '${{ secrets.FASTLANE_XCODEBUILD_SETTINGS_RETRIES }}'
+      GIT_USER: '${{ secrets.GIT_USER }}'
+      GIT_PASS: '${{ secrets.GIT_PASS }}'
+      FIND: 'release/'
+      REPLACE: ''
+
+    steps:  
+    
+      - name: Clone project
+        run: |
+          cd ..
+          rm -rf ananas-ios
+          git clone -b ${BUILD_BRANCH} https://${GIT_USER}:${GIT_PASS}@github.com/ESKARIA/ananas-ios.git
+
+      - name: Configure Git with credentials
+        run: |
+          git config --worktree url."https://${GIT_USER}:${GIT_PASS}@github.com/".insteadOf https://github.com/
+
+      - name: Bundle install
+        run: |
+          bundle install 
+
+      - name: Build and Deploy
+        run: |
+          str=${BUILD_BRANCH}
+          find="release/"
+          replace=""
+          result=${str//$find/$replace}
+          bundle exec fastlane beta ver:${result} --verbose        

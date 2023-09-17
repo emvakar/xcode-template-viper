@@ -21,6 +21,60 @@
 
 gem &apos;fastlane&apos;, &apos;&gt;= 2.214.0&apos;
 			</string>
+		<key>../../.gitignore</key>
+		<dict>
+			<key>Group</key>
+			<array>
+				<string>Core</string>
+			</array>
+			<key>Path</key>
+			<string>core/.gitignore</string>
+		</dict>
+		<key>../../.bundle/config</key>
+		<dict>
+			<key>Group</key>
+			<array>
+				<string>Core</string>
+			</array>
+			<key>Path</key>
+			<string>core/.bundle/config</string>
+		</dict>
+		<key>../../.github/workflows/auto-label-ios.yml</key>
+		<dict>
+			<key>Group</key>
+			<array>
+				<string>Core</string>
+			</array>
+			<key>Path</key>
+			<string>core/.github/workflows/auto-label-ios.yml</string>
+		</dict>
+		<key>../../.github/workflows/auto-project.yml</key>
+		<dict>
+			<key>Group</key>
+			<array>
+				<string>Core</string>
+			</array>
+			<key>Path</key>
+			<string>core/.github/workflows/auto-project.yml</string>
+		</dict>
+		<key>../../.github/workflows/draft-release.yml</key>
+		<dict>
+			<key>Group</key>
+			<array>
+				<string>Core</string>
+			</array>
+			<key>Path</key>
+			<string>core/.github/workflows/draft-release.yml</string>
+		</dict>
+		<key>../../.github/workflows/testflight.yml</key>
+		<dict>
+			<key>Group</key>
+			<array>
+				<string>Core</string>
+			</array>
+			<key>Path</key>
+			<string>core/.github/workflows/testflight.yml</string>
+		</dict>
 		<key>../README.md</key>
 		<dict>
 			<key>Path</key>
@@ -335,17 +389,21 @@ gem &apos;fastlane&apos;, &apos;&gt;= 2.214.0&apos;
 	</dict>
 	<key>Nodes</key>
 	<array>
+		<string>../.gitignore</string>
+		<string>../.bundle/config</string>
+		<string>../.github/workflows/auto-label-ios.yml</string>
+		<string>../.github/workflows/auto-project.yml</string>
+		<string>../.github/workflows/draft-release.yml</string>
+		<string>../.github/workflows/testflight.yml</string>
 		<string>../Gemfile</string>
 		<string>../README.md</string>
 		<string>../Rambafile</string>
-		
 		<string>fastlane/Appfile</string>
 		<string>fastlane/Fastfile</string>
 		<string>fastlane/Matchfile</string>
 		<string>fastlane/Pluginfile</string>
 		<string>fastlane/README.md</string>
 		<string>fastlane/template.env</string>
-
 		<string>App/AppDelegate.swift</string>
 		<string>App/SceneDelegate.swift</string>
 		<string>Assembly/DIResolver.swift</string>

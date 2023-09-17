@@ -1,0 +1,95 @@
+name: Draft Release
+
+on:
+  push:
+    branches:
+      - 'release/**'
+      - 'main'
+
+  pull_request:
+    types: [closed, edited]
+
+  schedule:
+      - cron: '0 8 * * *'  # Запускать каждый день в 11 утра по мск (+3)
+
+jobs:
+  draft_release:
+    runs-on: [self-hosted, dockered]
+    steps:
+    - name: Draft or update release
+      uses: actions/github-script@v6.4.1
+      with:
+        github-token: ${{ secrets.GITHUB_TOKEN }}
+        script: |
+          const repo = context.repo;
+          const closedPRs = await github.rest.pulls.list({
+              owner: repo.owner,
+              repo: repo.repo,
+              state: "closed",
+              sort: "updated",
+              direction: "desc",
+          });
+
+          const getAuthorInfo = async (userLogin) => {
+            if (!userLogin) {
+                return { name: defaultAuthor, url: `https://github.com/${defaultAuthor}`, login: defaultAuthor };
+            }
+            const user = await github.rest.users.getByUsername({ username: userLogin });
+            return { name: user.data.name || user.data.login, url: user.data.html_url, login: user.data.login };
+          };
+
+          const milestones = {};
+          for (const pr of closedPRs.data) {
+              const milestone = pr.milestone;
+              if (!milestone) {
+                  continue;
+              }
+              if (!milestones[milestone.number]) {
+                  milestones[milestone.number] = { milestone: milestone, prs: [] };
+              }
+              milestones[milestone.number].prs.push(pr);
+          }
+
+          for (const milestoneNumber in milestones) {
+              const { milestone, prs } = milestones[milestoneNumber];
+              const releases = await github.rest.repos.listReleases({ owner: repo.owner, repo: repo.repo });
+              let release = releases.data.find(r => r.name === milestone.title);
+
+              if (!release) {
+                  release = await github.rest.repos.createRelease({
+                      owner: repo.owner,
+                      repo: repo.repo,
+                      tag_name: milestone.title,
+                      name: milestone.title,
+                      draft: true,
+                      body: "# What's Changed\n\n",
+                  });
+              }
+
+              const header = "# What's Changed\n\n";
+              let body = header;
+
+              for (const label of ["bug", "feature", "maintenance"]) {
+                  const prsInSection = prs.filter(pr => pr.labels.length > 0 ? pr.labels.some(l => l.name === label) : label === "maintenance");
+                  
+                  if (prsInSection.length > 0) {
+                      const heading = {
+                          bug: "## 🐛 Bug Fixed\n\n",
+                          feature: "## 🚀 Features\n\n",
+                          maintenance: "## 🧰 Maintenance\n\n",
+                      }[label];
+
+                      body += heading;
+
+                      for (const pr of prsInSection) {
+                          const userLogin = pr.user.login;
+                          const authorInfo = await getAuthorInfo(userLogin || defaultAuthor);
+                          body += `- [${pr.title}](${pr.html_url}) - @${authorInfo.login}\n`;
+                      }
+
+                      body += "\n";
+                  }
+              }
+
+              await github.rest.repos.updateRelease({ owner: repo.owner, repo: repo.repo, release_id: release.id, body: body });
+          }
