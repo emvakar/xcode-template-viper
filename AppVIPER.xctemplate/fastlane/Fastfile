@@ -1,0 +1,6 @@
+# Uncomment the line if you want fastlane to automatically update itself
+# update_fastlane
+
+default_platform(:ios)
+
+import_from_git(url: "git@github.com:ESKARIA/fastlane-tools.git", branch: "main")

@@ -278,12 +278,74 @@ gem &apos;fastlane&apos;, &apos;&gt;= 2.214.0&apos;
 			<key>Path</key>
 			<string>Modules/Base/WireFrame/BaseWireFrame.swift</string>
 		</dict>
+		<key>fastlane/Appfile</key>
+		<dict>
+			<key>Group</key>
+			<array>
+				<string>fastlane</string>
+			</array>
+			<key>Path</key>
+			<string>fastlane/Appfile</string>
+		</dict>
+		<key>fastlane/Fastfile</key>
+		<dict>
+			<key>Group</key>
+			<array>
+				<string>fastlane</string>
+			</array>
+			<key>Path</key>
+			<string>fastlane/Fastfile</string>
+		</dict>
+		<key>fastlane/Matchfile</key>
+		<dict>
+			<key>Group</key>
+			<array>
+				<string>fastlane</string>
+			</array>
+			<key>Path</key>
+			<string>fastlane/Matchfile</string>
+		</dict>
+		<key>fastlane/Pluginfile</key>
+		<dict>
+			<key>Group</key>
+			<array>
+				<string>fastlane</string>
+			</array>
+			<key>Path</key>
+			<string>fastlane/Pluginfile</string>
+		</dict>
+		<key>fastlane/README.md</key>
+		<dict>
+			<key>Group</key>
+			<array>
+				<string>fastlane</string>
+			</array>
+			<key>Path</key>
+			<string>fastlane/README.md</string>
+		</dict>
+		<key>fastlane/template.env</key>
+		<dict>
+			<key>Group</key>
+			<array>
+				<string>fastlane</string>
+			</array>
+			<key>Path</key>
+			<string>fastlane/template.env</string>
+		</dict>
 	</dict>
 	<key>Nodes</key>
 	<array>
 		<string>../Gemfile</string>
 		<string>../README.md</string>
 		<string>../Rambafile</string>
+		
+		<string>fastlane/Appfile</string>
+		<string>fastlane/Fastfile</string>
+		<string>fastlane/Matchfile</string>
+		<string>fastlane/Pluginfile</string>
+		<string>fastlane/README.md</string>
+		<string>fastlane/template.env</string>
+
 		<string>App/AppDelegate.swift</string>
 		<string>App/SceneDelegate.swift</string>
 		<string>Assembly/DIResolver.swift</string>
