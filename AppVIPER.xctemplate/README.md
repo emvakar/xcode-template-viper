@@ -3,26 +3,24 @@
 
 Description of my project
 
-### Dependecies
-We use Swift Package Manager for dependecies.
-Our template needs some base dependencies.
+### Dependencies
 
-#### SnapKit
-```
-https://github.com/SnapKit/SnapKit.git
-```
+We use the Swift Package Manager for dependency management.
+Our template requires the following base dependencies:
+
+- SnapKit `https://github.com/SnapKit/SnapKit.git`
 
 ### Generabma
 
-Наш кодогенератор
+Generamba is our code generation tool.
 
-Устанавливаем последние шаблоны:
+To install the latest templates:
 
 ```shell
 generamba  template  install
 ```
 
-Создание нового модуля для разработки
+To create a new module for development:
 
 ```shell
 generamba  gen  MODULE_NAME  ios_viper
