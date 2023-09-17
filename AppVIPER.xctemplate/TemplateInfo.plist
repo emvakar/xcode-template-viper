@@ -21,57 +21,33 @@
 
 gem &apos;fastlane&apos;, &apos;&gt;= 2.214.0&apos;
 			</string>
-		<key>../../.gitignore</key>
+		<key>../.gitignore</key>
 		<dict>
-			<key>Group</key>
-			<array>
-				<string>Core</string>
-			</array>
 			<key>Path</key>
 			<string>core/.gitignore</string>
 		</dict>
-		<key>../../.bundle/config</key>
+		<key>../.bundle/config</key>
 		<dict>
-			<key>Group</key>
-			<array>
-				<string>Core</string>
-			</array>
 			<key>Path</key>
 			<string>core/.bundle/config</string>
 		</dict>
-		<key>../../.github/workflows/auto-label-ios.yml</key>
+		<key>../.github/workflows/auto-label-ios.yml</key>
 		<dict>
-			<key>Group</key>
-			<array>
-				<string>Core</string>
-			</array>
 			<key>Path</key>
 			<string>core/.github/workflows/auto-label-ios.yml</string>
 		</dict>
-		<key>../../.github/workflows/auto-project.yml</key>
+		<key>../.github/workflows/auto-project.yml</key>
 		<dict>
-			<key>Group</key>
-			<array>
-				<string>Core</string>
-			</array>
 			<key>Path</key>
 			<string>core/.github/workflows/auto-project.yml</string>
 		</dict>
-		<key>../../.github/workflows/draft-release.yml</key>
+		<key>../.github/workflows/draft-release.yml</key>
 		<dict>
-			<key>Group</key>
-			<array>
-				<string>Core</string>
-			</array>
 			<key>Path</key>
 			<string>core/.github/workflows/draft-release.yml</string>
 		</dict>
-		<key>../../.github/workflows/testflight.yml</key>
+		<key>../.github/workflows/testflight.yml</key>
 		<dict>
-			<key>Group</key>
-			<array>
-				<string>Core</string>
-			</array>
 			<key>Path</key>
 			<string>core/.github/workflows/testflight.yml</string>
 		</dict>
