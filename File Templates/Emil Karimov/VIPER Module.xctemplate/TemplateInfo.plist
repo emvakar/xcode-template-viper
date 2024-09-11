@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plist version="1.0">
+<dict>
+    <key>Kind</key>
+    <string>Xcode.IDEKit.TextSubstitutionFileTemplateKind</string>
+    <key>Target</key>
+    <string>Swift</string>
+    <key>Platforms</key>
+    <array>
+        <string>com.apple.platform.iphoneos</string>
+        <string>com.apple.platform.macosx</string>
+    </array>
+    <key>TemplateCompletionScopes</key>
+    <array>
+        <string>All</string>
+    </array>
+    <key>Name</key>
+    <string>VIPER Module</string>
+    <key>Description</key>
+    <string>Generates a VIPER module structure</string>
+    <key>Options</key>
+    <array>
+        <dict>
+            <key>Identifier</key>
+            <string>moduleName</string>
+            <key>Required</key>
+            <true/>
+            <key>Name</key>
+            <string>Module Name</string>
+            <key>Description</key>
+            <string>The name of the module</string>
+            <key>Type</key>
+            <string>text</string>
+        </dict>
+        <dict>
+			<key>Default</key>
+			<string>___VARIABLE_moduleName___</string>
+			<key>Identifier</key>
+			<string>moduleName</string>
+			<key>Type</key>
+			<string>static</string>
+		</dict>
+    </array>
+</dict>
+</plist>
