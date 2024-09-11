@@ -44,6 +44,7 @@ curl -sSL https://raw.githubusercontent.com/emvakar/xcode-template-viper/main/in
 
 Иерархия модуля
 
+```
 Splash
 │
 ├── Splash+DIResolver
@@ -62,6 +63,7 @@ Splash
 │
 └── Interactor
     └── SplashInteractor
+```
 
 #### Шаблоны Xcode
 

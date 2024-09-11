@@ -44,6 +44,7 @@ Our template requires the following base dependencies:
 
 Hierarhy module
 
+```
 Splash
 │
 ├── Splash+DIResolver
@@ -62,6 +63,7 @@ Splash
 │
 └── Interactor
     └── SplashInteractor
+```
 
 #### Xcode Template
 
