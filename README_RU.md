@@ -1,4 +1,4 @@
-# VIPER template for Xcode (15.0.0)
+# VIPER template for Xcode (<= 16.0.0) 
 
 [English :us:](./README.md)
 
@@ -40,7 +40,36 @@ curl -sSL https://raw.githubusercontent.com/emvakar/xcode-template-viper/main/in
 
 - SnapKit `https://github.com/SnapKit/SnapKit.git`
 
-### Generabma
+### Генерация нового модуля
+
+Иерархия модуля
+
+Splash
+│
+├── Splash+DIResolver
+│
+├── Protocols
+│   └── SplashProtocols
+│
+├── View
+│   └── SplashViewController
+│
+├── Presenter
+│   └── SplashPresenter
+│
+├── WireFrame
+│   └── SplashWireFrame
+│
+└── Interactor
+    └── SplashInteractor
+
+#### Шаблоны Xcode
+
+1. Нажмите `CMD + N`
+2. Выберите категорию `iOS`.
+3. Пролистайте вниз до раздела `Emil Karimov` и выберите шаблон `VIPER Module`.
+
+#### Generamba
 
 Generamba — наш инструмент для генерации кода.
 
@@ -55,3 +84,10 @@ generamba  template  install
 ```shell
 generamba  gen  MODULE_NAME  ios_viper
 ```
+
+#### Дополнительная информация
+
+Этот шаблон подходит как для новичков, так и для опытных разработчиков, работающих с VIPER архитектурой. Благодаря встроенной структуре, каждый новый модуль автоматически создается с четко разделенными слоями, что позволяет легко масштабировать проект и поддерживать его в долгосрочной перспективе.
+
+#### Примечание: 
+В зависимости от версии Xcode возможны небольшие различия в интерфейсе создания проектов и добавления новых файлов.

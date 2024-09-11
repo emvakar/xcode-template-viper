@@ -1,4 +1,4 @@
-# VIPER template for Xcode (15.0.0)
+# VIPER template for Xcode (<= 16.0.0) 
 
 [Russian :ru:](./README_RU.md)
 
@@ -40,7 +40,36 @@ Our template requires the following base dependencies:
 
 - SnapKit `https://github.com/SnapKit/SnapKit.git`
 
-### Generabma
+### Generate new module
+
+Hierarhy module
+
+Splash
+│
+├── Splash+DIResolver
+│
+├── Protocols
+│   └── SplashProtocols
+│
+├── View
+│   └── SplashViewController
+│
+├── Presenter
+│   └── SplashPresenter
+│
+├── WireFrame
+│   └── SplashWireFrame
+│
+└── Interactor
+    └── SplashInteractor
+
+#### Xcode Template
+
+1. Press `CMD + N`
+2. Select category `iOS`.
+3. Scroll down to `Emil Karimov` and select `VIPER Module`.
+
+#### or Generabma
 
 Generamba is our code generation tool.
 
